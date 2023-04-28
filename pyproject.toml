@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "parselpy"
+name = "templated"
 version = "0.1.0"
 description = ""
 authors = ["Jacob Valdez <jacob.valdez@limboid.ai>"]
