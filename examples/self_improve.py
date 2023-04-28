@@ -2,12 +2,12 @@ from glob import glob
 from pathlib import Path
 from textwrap import dedent
 
-from parselpy import Function
+from templated import Function
 
 ai = Function(
     dedent(
         """
-        You are an large language model. This is your codebase:
+        You are an artificial intelligence system. This is your codebase:
         
         {% for path, code in codebase %}
         Path: {{ path }}
@@ -22,8 +22,10 @@ ai = Function(
     verbose=True,
 )
 
-paths = Path("parselpy").glob("**/*.py")
+paths = Path("templated").glob("**/*.py")
 paths = filter(lambda path: path.is_file(), paths)
 codebase = [(path, path.read_text()) for path in paths]
 
-print(ai(codebase=codebase))
+response = ai(codebase=codebase)
+
+print(response)
