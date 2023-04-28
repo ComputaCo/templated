@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "templated"
-version = "0.1.0"
+version = "0.1.2"
 description = ""
 authors = ["Jacob Valdez <jacob.valdez@limboid.ai>"]
 readme = "README.md"
